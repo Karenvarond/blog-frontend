@@ -4,22 +4,27 @@ Este repositorio contiene el sitio de consumo (Frontend) del sistema de Blog. De
 
 ## Instrucciones de Despliegue
 
-### 1. Construccion
-Navega a la carpeta del proyecto e instala las dependencias mediante npm:
+### 1. Construcción
+Navegue a la carpeta del proyecto e instale las dependencias mediante npm:
 ```bash
 npm install
 ```
 
-Asegurate de que el backend este corriendo de forma local. La API base esta configurada para apuntar a `http://localhost:3000/api`.
+### 2. Configuración de Entorno
+Cree un archivo `.env` en la raíz de este proyecto con la ruta de conexión hacia la API:
+```env
+VITE_API_URL=http://localhost:3000/api
+```
+Asegúrese de que el backend esté en ejecución de forma local antes de iniciar.
 
-### 2. Compilacion
+### 3. Compilación
 Para generar el build de produccion (en caso de requerirse para despliegue final):
 ```bash
 npm run build
 ```
 Esto generara la carpeta `dist` con los assets optimizados y listos para produccion.
 
-### 3. Ejecucion
+### 4. Ejecución
 Para correr la aplicacion en entorno de desarrollo local y realizar las pruebas de funcionalidad:
 ```bash
 npm run dev
